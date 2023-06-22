@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Manger avec Ohmyfood">
+        <title>Ohmyfood</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/e7617f6ec8.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="https://kit.fontawesome.com/e7617f6ec8.js" crossorigin="anonymous"></script>
+</head>
+
+    <body>    
+        
+        <header class="logo centrer"  >
+            <p><img class="logo__img" src="image/logo/ohmyfood.png"   
+                alt="logo ohmyfood" ></p>
+        </header>
+
+        <main class="main-con">
+
+            <!-- barre  de recherche -->
+            <form class='recherche'>  
+                
+                <!-- zone de recherche -->
+                <div class="barrederecherche" >
+                <i class="fa-solid fa-location-dot"></i>
+                <input type='search' placeholder="Paris, Belleville" id='ville' name='ville' class='recherche--zone '>
+                <label for='ville' class='recherche__fa'></label>
+                </div>
+
+                <!-- titre + texte -->
+                <h1 class='titl bolder'>Réservez le menu qui vous convient</h1> <!-- Mal fait ou dit. Le choix du menu est fait après le choix du restaurant -->
+                <p class='titl bold'>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <!-- bouton de recherche-->
+                <div class="bouton-explorer-border">
+                <input type='button' class='bouton-explorer' value="Explorer nos restaurants">
+                </div>
+            </form>
+<section>
+<h2>Fonctionnement</h2>
+<div class="Fonctionnement-cards">
+    <button class="bouton">
+        <span class="bouton-numero ">1</span>
+        <i class="fa-solid fa-mobile-screen-button smartphone"></i> 
+        Choisissez un restaurant 
+    </button>  
+    <button class="bouton">
+        <span class="bouton-numero">2</span> 
+        <i class="fa-solid fa-list-ul smartphone "></i>
+        Composez votre menu
+    </button>  
+    <button class="bouton">
+        <span class="bouton-numero">3</span> 
+        <i class="fa-solid fa-store smartphone"></i>
+        Dégustez au restaurant
+    </button>    
+</div>
+    </section>
+            <div class="restaurant">
+                <section class="restaurant-1">
+                <h2 class="textrestaurants">Restaurants</h2>
+                    <div class="restaurantcards">
+        <div class="centre-cards">
+                    <article class="carte1">
+                        <a href="la_palette_du_gout.html" class="liens">
+                            <span class="nouveau">Nouveau</span>
+                        <img class="imgrestaurant" src="image/restaurants/la-palette-du-gout900.jpg"  alt='La palette du goût' >
+                        <div class="card-content"> 
+                            <div class="card-txt">
+                            <h3 class="titre-lien">La palette du goût</h3>
+                            <p class="texte-lien">Ménilmontant</p>
+                            </div>
+                                <form class="favoris">
+                                        <i class="fa-regular fa-heart btnfavoris "></i>
+                                </form>
+                                
+                        </div>
+                    </a>
+                    </article>
+                    <article class="carte2">
+                        <a href="la_note_enchantee.html" class="liens">
+                            <span class="nouveau">Nouveau</span>
+                        <img class="imgrestaurant" src="image/restaurants/la-note-enchantee900.jpg" alt="La note enchantée">
+                        <div class="card-content"> 
+                            <div class="card-txt">
+                            <h3 class='titre-lien'>La note enchantée</h3>
+                            <p class='texte-lien'>Charonne</p>
+                            </div>
+                            <form class="favoris ">
+                                    <i class="fa-regular fa-heart btnfavoris"></i>
+                            </form>
+                        </div>
+                        </a>
+                    </article>
+                    <article class="carte3">
+                        <a href="a_la_française.html" class="liens">
+                            
+                        <img class="imgrestaurant" src="image/restaurants/a-la-française900.webp" alt="À la française">                             
+                        <div class="card-content"> 
+                            <div class="card-txt">
+                            <h3 class='titre-lien'>À la française</h3>
+                            <p class='texte-lien'>Cité rouge</p>
+                            </div>
+                            <form class="favoris">
+                                    <i class="fa-regular fa-heart btnfavoris "></i>
+                            </form>
+                        </div>
+                        </a>           
+                    </article>
+                    <article class="carte4">
+                        <a href="le_delice_des_sens.html" class="liens">
+                        <img class="imgrestaurant" src='image/restaurants/le-delice-des-sens900.webp' alt="Le délice des sens">
+                        <div class="card-content"> 
+                            <div class="card-txt">
+                            <h3 class='titre-lien'>Le délice des sens</h3>
+                            <p class='texte-lien'>Folie-Méricourt</p>
+                            </div>
+                            <form class="favoris">
+                                    <i class="fa-regular fa-heart btnfavoris "></i>                               
+                            </form>
+                        </div>
+                        </a>   
+                    </article>
+        </div>
+                </section>
+            </div>
+        </main>
+        <footer class="pdp">
+    <h3 class="piedtitre">ohmyfood</h3>
+
+    <ul class="liste">
+        <il class="elementliste">
+            <a class="texte-element" href="#ancre6"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
+        </il>
+        <il class="elementliste">
+            <a class="texte-element" href="#ancre7"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+        </il>
+        <il class="elementliste">
+            <a class="texte-element" href="#ancre8"> Mentions légales</a>
+        </il>
+        <il class="elementliste">
+            <a class="texte-element" href="#ancre9">Contact</a>
+        </il>
+    </ul>
+        </footer>
+
+
+
+        
+    </body>
+</html>
