@@ -8,6 +8,31 @@
   body{
     margin: 0;
   }
+  .contenair-main{
+    /**width: 70%; 
+    margin-left: 500px;
+    margin-right: 500px;**/
+    background: #F6F6F6;
+    border-radius: 40px 40px 0 0;
+    position: relative ;
+    top: -40px;
+    
+  }
+  .plat-valide{
+    width: 0;
+    overflow: hidden;
+    background-color: #99E2D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.3s ;
+  }
+  /** > pour les element enfants **/
+  .plat-valide > .fa-circle-check{
+    color: white;
+    font-size: 20px;
+    padding: 0;
+  }
   .centrer{
     display: flex;
     justify-content: center;
@@ -70,6 +95,13 @@
     line-height: 21px;
   
   }
+  /**************************************    BOUTON START   *******************/
+  .btn{
+
+  }
+
+
+
   .bouton-explorer{
     height: 50px;
     width: 220px;
@@ -79,7 +111,7 @@
     border-radius: 25px;
     font-size: 0.95rem;
     font-weight: 500;
-    box-shadow: 0px 5px 10px 0px #c1c1c1;
+    box-shadow: 5px 7px 26px -9px rgba(0,0,0,0.5);
     background: linear-gradient(170deg, #FF79DA, #9356DC);
     color: #FFF;
     position: relative;
@@ -90,8 +122,8 @@
     transform: scale(1.25);
     opacity: 80%;
     cursor: pointer;
-}
-  /** ---------------------------------   START  FONCTIONNEMENT**/
+  }
+  
   
   .bouton{
     position: relative;
@@ -118,9 +150,23 @@
       }
     }
     .bouton:hover{
-      transform:scale(1.1);
+      transform:scale(1.5);
       
     }
+    /***************************************22 juin 16h02 ***********/
+    .bouton-menu:hover .plat-valide{
+      width: 15%;
+    }
+    
+    /**.favoris:hover .btnfavoris-vide,
+    .favoris input:checked + .btnfavoris-vide{
+      opacity: 0;
+    }
+    .favoris:hover .btnfavoris-plein,
+    .favoris input:checked + .btnfavoris-vide + .btnfavoris-plein{
+      opacity: 1;
+    }**/
+    
   .bouton-clic{
     
     display: flex;
@@ -129,9 +175,6 @@
     text-decoration: none;
     color: black;
     padding-left: 20px;
-  }
-  p{
-    padding-left: 10px;
   }
   .bouton-numero{
     position: absolute;
@@ -145,7 +188,17 @@
     position: relative;
     transition:transform .5s ;
     }
-    
+    .lesboutons{
+      display: flex;
+      flex-direction: column;
+      justify-content:space-between;
+      align-items: center;
+      gap: 17px;
+      padding-bottom: 15px;
+    }
+    p{
+      padding-left: 10px;
+    }
   .Fonctionnement-cards{
     display: flex;
     flex-direction: column;
@@ -167,36 +220,76 @@
   .bouton:hover{
     cursor: pointer;
   }
+
+  .bouton-menu{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    width: 87%;
+    height: 75px;
+    overflow: hidden;
+    text-align:start;
+    font-size: 16px;
+    justify-content:center;
+    font-weight: 500;
+    gap: 5px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 5px 7px 26px -9px rgba(0,0,0,0.5);
+    transition: 0.4s all ease-in-out 0s;
+  }
+  .titre-description{
+    flex: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  .bouton-menu::before{
+    right: unset;
+    left: 0;
+    width: 0;
+  }
+  .bouton-menu:hover::before{
+    right: 0;
+    left: unset;
+    width: 20%;
+  }
+  .btn-commande{
+    background: linear-gradient(170deg, #FF79DA, #9356DC);
+    height: 50px;
+    font-size: 16px;
+    color: white;
+    padding-left:20px ;
+    padding-right: 20px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 5px 7px 26px -9px rgba(0,0,0,0.5);
+  }
+  .btn-commande-border{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    
+  }
+  /***********************************   BOUTON FIN   ********************/
   /**------------start---------carte animation ---**/
-  .carte1{
+  .carte{
     position: relative;
-    transition:transform .5s ;
-  
+    transition:all 0.5s;
+    width: 100%;
   }
-  .carte2{
-    position: relative;
-    transition:transform .5s ;
+  .carte:hover{
+    transform:scale(0.9);
   }
-  .carte3{
-    position: relative;
-    transition:transform .5s ;
-  }
-  .carte4{
-    position: relative;
-    transition:transform .5s ;
-  }
-  .carte1:hover{
-    transform:scale(0.9)
-  }
-  .carte2:hover{
-    transform:scale(0.9)
-  }
-  .carte3:hover{
-    transform:scale(0.9)
-  }
-  .carte4:hover{
-    transform:scale(0.9)
-  }
+  .centre-cards{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 30px;
+    }
   /**------------FIN---------carte animation ---**/
   .nouveau{
     width: 62px;
@@ -211,11 +304,63 @@
     color:#008766 ;
     top: 15px;
     right: 15px;
-    transition: transform .5s;
   }
+  /**-------------------------------------------------26/26**/
   .nouveau:hover{
-    transform: scale(1.1) rotate(90deg);
+    transition: all .2s;
+    animation: nouveau 2s linear 0.05s 1 both;
   }
+    @keyframes nouveau {
+  5% {
+    -webkit-transform: rotateZ(40deg);
+            transform: rotateZ(40deg);
+  }
+  10% {
+    -webkit-transform: rotateZ(110deg);
+            transform: rotateZ(110deg);
+  }
+  15% {
+    -webkit-transform: rotateZ(85deg);
+            transform: rotateZ(85deg);
+  }
+  20% {
+    -webkit-transform: rotateZ(92.5deg);
+            transform: rotateZ(92.5deg);
+  }
+  30% {
+    -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
+  }
+  40% {
+    -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(75deg);
+            transform: rotateZ(75deg);
+  }
+  60% {
+    -webkit-transform: rotateZ(60deg);
+            transform: rotateZ(60deg);
+  }
+  70% {
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+  }
+  80% {
+    -webkit-transform: rotateZ(30deg);
+            transform: rotateZ(30deg);
+  }
+  90% {
+    -webkit-transform: rotateZ(15deg);
+            transform: rotateZ(15deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
   .imgrestaurant{
     
     width: 100%;
@@ -229,9 +374,6 @@
       
       border-radius: 25px;
       margin-bottom: 20px;
-  }
-  .restaurantcards{
-    
   }
   .main-con{
     width: 100%;
@@ -259,38 +401,47 @@
   }
   .favoris{
     display: flex;
-    background: transparent;
     justify-content: center;
     align-items: center;
-    padding-right: 25px;
-  }
-  .btnfavoris{
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 20px;
-  }
-  .fa-heart{
-    position: relative;
-    background-color: transparent;
-    border: black;
+    margin-right: 25px;
     transition: 0.3s;
-    }
-    .fa-heart:hover{
-    transform: scale(1.5);
-    }
-  
-  .fa-heart::before {
-    background-color: transparent;
-    font-weight: bold;
-    transition: color 0.3s ease-out;
-}
-.fa-heart:hover::before{
+  }
+  .favoris > label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .favoris input {
+    position: absolute;
+    opacity: 0.001;
+  }
+  .btnfavoris-vide{
+    position: absolute;
+    font-size: 20px;
+    opacity: 1;
+    transition: 0.3s;
+    padding: 0;
+  }
+  .btnfavoris-plein{
+    position: absolute;
+    opacity: 0;
+    font-size: 20px;
     color: #9747FF;
-    cursor: pointer;
-}
-
-
+    transition: 0.3s;
+    padding: 0;
+  }
+  .favoris:hover{
+    transform: scale(1.5);
+  }
+  .favoris:hover .btnfavoris-vide,
+  .favoris input:checked + .btnfavoris-vide{
+    opacity: 0;
+  }
+  .favoris:hover .btnfavoris-plein,
+  .favoris input:checked + .btnfavoris-vide + .btnfavoris-plein{
+    opacity: 1;
+  }
   .restaurant{
     background-color:#F7F7F7;
     display: flex;
@@ -408,25 +559,8 @@
     position: absolute;
     border-radius: 25px 25px ;
   }
-  .bouton-menu{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: #FFFFFF;
-    width: 87%;
-    height: 75px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align:start;
-    font-size: 16px;
-    justify-content:center;
-    font-weight: 500;
-    gap: 5px;
-    border-radius: 15px;
-    border: none;
-    box-shadow: 5px 7px 26px -9px rgba(0,0,0,0.5);
-  }
-  .plat-valide{
+  
+  /** .plat-valide{
     display: none;
     width: 0px;
     background-color: Green;
@@ -437,15 +571,8 @@
     background-color: Green;
     width: 30px;
   
-}
-  .lesboutons{
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    align-items: center;
-    gap: 17px;
-    padding-bottom: 15px;
-  }
+}**/
+  
   
   .plat-gras{
     font-weight: bolder;
@@ -456,39 +583,65 @@
   font-weight: 300;
   font-size: 15.0431px;
   line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   }
   .row-prix{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+  .prix-validation{
+    display: flex;
+    flex-direction: row;
+  }
   .prix-assiette{
     padding-right: 10px;
     padding-left: 10px;
     font-weight: bolder;
   }
-  .btn-commande{
-    background: linear-gradient(170deg, #FF79DA, #9356DC);
-    
-    height: 50px;
-    font-size: 16px;
-    color: white;
-    padding-left:20px ;
-    padding-right: 20px;
-    border-radius: 25px;
-    border: none;
-    box-shadow: 5px 7px 26px -9px rgba(0,0,0,0.5);
-  }
-  .btn-commande-border{
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 25px;
-    
-  }
+  
   @media (min-width: 1024px){
-    
-    
+    .contenair-main{
+      /**width: 70%;**/ 
+      margin-left: 500px;
+      margin-right: 500px;
+      background: #F6F6F6;
+      border-radius: 40px 40px 0 0;
+      position: relative ;
+      top: -40px;
+      
+    }
+    .bouton-menu:hover .plat-valide{
+      width: 10%;
+    }
+    .bouton-menu{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      background-color: #FFFFFF;
+      width: 87%;
+      height: 75px;
+      overflow: hidden;
+      text-align:start;
+      font-size: 16px;
+      justify-content:center;
+      font-weight: 500;
+      gap: 5px;
+      border-radius: 15px;
+      border: none;
+      box-shadow: 5px 7px 26px -9px rgba(0,0,0,0.5);
+      transition: 0.4s all ease-in-out 0s;
+    }
+    .lesboutons{
+      display: flex;
+      flex-direction: column;
+      justify-content:space-between;
+      align-items: center;
+      gap: 17px;
+      padding-bottom: 15px;
+    }
     .centrer{
       display: flex;
       justify-content: center;
@@ -504,23 +657,40 @@
       padding-right: 20px;
       padding-left: 20px;
     }
+    .centre-cards{
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      grid-template-rows: 1fr 1fr;
+      padding-left: 20px;
+    }
     .bouton{
       width: 30%;
     }
     .plat-valide{
-      display: none;
-      background-color: Green;
-      animation: animation-carte 1s ease-in 0.5s forwards;
+      width: 0;
+      overflow: hidden;
+      background-color: #99E2D0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: width 0.3s ;
+    }
+    /** > pour les element enfants **/
+    .plat-valide > .fa-circle-check{
+      color: white;
+      font-size: 20px;
+      padding: 0;
     }
     
-    .plat-valide:hover{
+    /**.plat-valide:hover{
       background-color: Green; 
+      height: 100%;
       width: 30px;
       @keyframes animation-carte{
         10%{transform:scale3d(0.975, 0.975, 1);}
         40%{transform:scale3d(0.975, 0.975, 1);}
-        100%{transform:scale3d(30, 30, 1);}  
-    }
+        100%{transform:scale3d(0.999, 0.999, 1);}  
+    }**/
   }
     .bouton-numero{
       position: absolute;
@@ -534,27 +704,13 @@
       position: relative;
       
       }
-      .carte1{
-        position: relative;
-    
-      }
-      .carte1:hover {
-        animation: animation-carte 1s ease-in 0.5s forwards;
-      }
-      .carte2:hover {
-        animation: animation-carte 1s ease-in 0.5s forwards;
-      }
-      .carte3:hover {
-        animation: animation-carte 1s ease-in 0.5s forwards;
-      }
-      .carte4:hover {
+      .carte:hover {
         animation: animation-carte 1s ease-in 0.5s forwards;
       }
       @keyframes animation-carte{
         10%{transform:scale3d(0.975, 0.975, 1);}
         40%{transform:scale3d(0.975, 0.975, 1);}
         100%{transform:scale3d(0.99, 0.99, 1);}  
-        
     }
   
     .p-bouton{
@@ -565,15 +721,8 @@
       line-height: 19px;
       font-weight: bolder;
     }
-    .centre-cards{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 30px;
-    }
     .restaurantcards article{
-      width: 40%;
+      /**width: 100%;**/
       margin-top: 15px;
     }
     .imgrestaurant{
@@ -604,7 +753,7 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
-      gap: 20px;
+      gap: 40px;
     }
     .texte-entrees{
       font-family: 'Roboto';
@@ -637,16 +786,7 @@
       align-items: center;
       position: relative;
     }
-    .contenair-main{
-      /**width: 70%; **/
-      margin-left: 500px;
-      margin-right: 500px;
-      background: #F6F6F6;
-      border-radius: 40px 40px 0 0;
-      position: relative ;
-      top: -40px;
-      
-    }
+    
     .btn-commande {
       background: linear-gradient(170deg, #FF79DA, #9356DC);
       height: 50px;
