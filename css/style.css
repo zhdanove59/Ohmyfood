@@ -488,6 +488,12 @@
   }
   .pdp{
     background-color: #353535;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+    padding-bottom: 20px;
+    margin-top: -40px;
   }
   .piedtitre{
     font-family:'Shrikhand';
@@ -879,7 +885,8 @@
     .pdp{
       padding-top: 50px;
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: column;
+      /**flex-direction: row-reverse;**/
       padding-right: 60px;
       padding-bottom: 20px;
       margin-top: -40px;
@@ -889,7 +896,8 @@
     }
     .liste {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      /**flex-direction: row;**/
       gap: 20px;
       padding-left: 25px;
       padding-bottom: 20px;
