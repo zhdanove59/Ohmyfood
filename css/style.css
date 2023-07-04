@@ -8,6 +8,13 @@
   body{
     margin: 0;
   }
+  .fa-arrow-left{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    size: 30px;
+    color: #353535;
+    font-size: 17px;
+  }
   .contenair-main{
     /**width: 70%; 
     margin-left: 500px;
@@ -16,7 +23,21 @@
     border-radius: 40px 40px 0 0;
     position: relative ;
     top: -40px;
-    
+    animation: flou 1.8s linear 0s forwards;
+  }
+  @keyframes flou {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   .plat-valide{
     width: 0;
@@ -25,7 +46,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: width 0.3s ;
+    transition: width 0.9s ;
   }
   /** > pour les element enfants **/
   .plat-valide > .fa-circle-check{
@@ -105,11 +126,6 @@
   
   }
   /**************************************    BOUTON START   *******************/
-  .btn{
-
-  }
-
-
 
   .bouton-explorer{
     height: 50px;
@@ -125,6 +141,7 @@
     color: #FFF;
     position: relative;
     transition: 0.3s;
+    box-shadow: 5px 7px 26px -9px rgba(0,0,0,1);
     
   }
   .bouton-explorer:hover{
@@ -153,13 +170,14 @@
     position: relative;
     transition:transform .5s ;
     }
+    
     @keyframes pulse {
       to {
         box-shadow: 0 0 0 18px  rgba(0,0,0,0.01) ;
       }
     }
     .bouton:hover{
-      transform:scale(1.2); 
+      transform:scale(1.1); 
     }
     .bouton:hover .bouton-numero{
       transform: rotate(720deg) scale(1.5);
@@ -439,8 +457,8 @@
     position: absolute;
     opacity: 0;
     font-size: 20px;
-    color: #9747FF;
-    transition: 0.3s;
+    color: linear-gradient(170deg, #FF79DA, #9356DC);;
+    transition: .9s;
     padding: 0;
   }
   .favoris:hover{
@@ -454,6 +472,12 @@
   .favoris input:checked + .btnfavoris-vide + .btnfavoris-plein{
     opacity: 1;
   }
+
+
+  /**************************** teste plat valide *******/
+  .plat-valide input:checked {
+    width: 20%;
+  } 
   .restaurant{
     background-color:#F7F7F7;
     display: flex;
@@ -558,8 +582,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 18px;
+    margin-bottom: 18px;
     position: relative;
   }
   .tete-fleche{
@@ -615,6 +639,28 @@
   }
   
   @media (min-width: 1024px){
+    .main-con {
+      width: 100%;
+     /** top: -40px;**/
+      position: relative;
+    }
+    .card-content{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .btnfavoris-plein{
+      position: absolute;
+      opacity: 0;
+      font-size: 20px;
+      transition: .9s;
+      padding: 0;
+      background: -webkit-linear-gradient(-90deg, #9356dc, #ff79da);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  color: transparent;
+    }
     .contenair-main{
       /**width: 70%;**/ 
       margin-left: 500px;
@@ -623,8 +669,82 @@
       border-radius: 40px 40px 0 0;
       position: relative ;
       top: -40px;
-      
+      animation: flou 1.8s linear 0s forwards;
+      padding-bottom:20px;
     }
+    @keyframes flou {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 0;
+      }
+      60% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .btnentre{
+      animation: flouentre 1.8s linear 0s forwards;
+    }
+    @keyframes flouentre {
+      0% {
+        opacity: 0;
+        transform:translateY(50px);
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+        transform:translateY(0px);
+      }
+    }
+    .btnplats{
+      animation: flouplats 1.8s linear 0s forwards;
+    }
+    @keyframes flouplats {
+      0% {
+        opacity:0;
+        transform:translateY(50px);
+      }
+      30% {
+        opacity: 0;
+      }
+      60% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+        transform:translateY(0px);
+
+      }
+    }
+    .btndessert{
+      animation: floudessert 1.8s linear 0s forwards;
+    }
+    @keyframes floudessert {
+      0% {
+        opacity: 0;
+        transform:translateY(50px);
+      }
+      30% {
+        opacity: 0;
+      }
+      60% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform:translateY(0px);
+      }
+    }
+
     .plat-petit{
       font-family: 'Roboto';
     font-style: normal;
@@ -632,7 +752,7 @@
     font-size: 15.0431px;
     line-height: 18px;
     overflow: hidden;
-    text-overflow: ellipsis;
+    /**text-overflow: ellipsis;**/
     white-space: nowrap;
     }
     .bouton-menu:hover .plat-valide{
@@ -695,7 +815,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: width 0.3s ;
+      transition: width 0.9s ;
     }
     /** > pour les element enfants **/
     .plat-valide > .fa-circle-check{
@@ -746,6 +866,8 @@
     .restaurantcards article{
       /**width: 100%;**/
       margin-top: 15px;
+        margin-top: 15px;
+        margin-bottom: 40px;
     }
     .imgrestaurant{
       height: 200px;
@@ -760,6 +882,10 @@
       flex-direction: row-reverse;
       padding-right: 60px;
       padding-bottom: 20px;
+      margin-top: -40px;
+    }
+    li::marker{
+      color: transparent;
     }
     .liste {
       display: flex;
@@ -822,7 +948,3 @@
       border: none;
       box-shadow: 5px 7px 26px -9px rgba(0,0,0,0.5);
   }
-    
-  }
-  
-  @keyframes
