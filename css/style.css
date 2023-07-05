@@ -24,6 +24,7 @@
     position: relative ;
     top: -40px;
     animation: flou 1.8s linear 0s forwards;
+    padding-bottom: 20px
   }
   @keyframes flou {
     0% {
@@ -407,6 +408,7 @@
   }
   .main-con{
     width: 100%;
+    padding-bottom: 43px;
     
   }
   .textrestaurants{
@@ -645,6 +647,8 @@
   }
   
   @media (min-width: 1024px){
+
+    /*********************************index*****************/
     .main-con {
       width: 100%;
      /** top: -40px;**/
@@ -663,10 +667,86 @@
       transition: .9s;
       padding: 0;
       background: -webkit-linear-gradient(-90deg, #9356dc, #ff79da);
-  background-clip: content-box;
-  -webkit-background-clip: text;
-  color: transparent;
+      background-clip: content-box;
+      -webkit-background-clip: text;
+      color: transparent;
     }
+    .centrer{
+      display: flex;
+      justify-content: center;
+    }
+    .logo__img{
+      width: 200px;
+      height: 35px;
+    }
+    .Fonctionnement-cards{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    .centre-cards{
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      grid-template-rows: 1fr 1fr;
+      padding-left: 20px;
+    }
+    .bouton-numero{
+      position: absolute;
+      background-color: #9356DC;
+      border: 1px solid #9356DC;
+      width: 19px;
+      color: #FFF;
+      text-align: center;
+      border-radius: 10px;
+      left: -14px;
+      position: relative;
+      
+      }
+      .carte:hover {
+        animation: animation-carte 1s ease-in 0.5s forwards;
+      }
+      @keyframes animation-carte{
+        10%{transform:scale3d(0.975, 0.975, 1);}
+        40%{transform:scale3d(0.975, 0.975, 1);}
+        100%{transform:scale3d(0.99, 0.99, 1);}  
+    }
+    .restaurantcards article{
+      /**width: 100%;**/
+      margin-top: 15px;
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+    .imgrestaurant{
+      height: 200px;
+    }
+    .textrestaurants{
+      padding-left: 15px;
+      padding-top: 20px;
+    }
+    .pdp{
+      padding-top: 50px;
+      display: flex;
+      /**flex-direction: column;**/
+      flex-direction: row-reverse;
+      padding-right: 60px;
+      padding-bottom: 20px;
+      margin-top: -40px;
+    }
+    li::marker{
+      color: transparent;
+    }
+    .liste {
+      display: flex;
+      /**flex-direction: column;**/
+      flex-direction: row;
+      gap: 20px;
+      padding-left: 25px;
+      padding-bottom: 20px;
+      margin-bottom: 0;
+    }
+    /**************************** les pages ********************/
     .contenair-main{
       /**width: 70%;**/ 
       margin-left: 500px;
@@ -790,27 +870,6 @@
       gap: 17px;
       padding-bottom: 15px;
     }
-    .centrer{
-      display: flex;
-      justify-content: center;
-    }
-    .logo__img{
-    width: 200px;
-    height: 35px;
-  }
-    .Fonctionnement-cards{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-    .centre-cards{
-      display: grid;
-      grid-template-columns: 1fr 1fr ;
-      grid-template-rows: 1fr 1fr;
-      padding-left: 20px;
-    }
     .bouton{
       width: 30%;
     }
@@ -830,37 +889,6 @@
       padding: 0;
     }
     
-    /**.plat-valide:hover{
-      background-color: Green; 
-      height: 100%;
-      width: 30px;
-      @keyframes animation-carte{
-        10%{transform:scale3d(0.975, 0.975, 1);}
-        40%{transform:scale3d(0.975, 0.975, 1);}
-        100%{transform:scale3d(0.999, 0.999, 1);}  
-    }**/
-  }
-    .bouton-numero{
-      position: absolute;
-      background-color: #9356DC;
-      border: 1px solid #9356DC;
-      width: 19px;
-      color: #FFF;
-      text-align: center;
-      border-radius: 10px;
-      left: -14px;
-      position: relative;
-      
-      }
-      .carte:hover {
-        animation: animation-carte 1s ease-in 0.5s forwards;
-      }
-      @keyframes animation-carte{
-        10%{transform:scale3d(0.975, 0.975, 1);}
-        40%{transform:scale3d(0.975, 0.975, 1);}
-        100%{transform:scale3d(0.99, 0.99, 1);}  
-    }
-  
     .p-bouton{
       font-family: 'Roboto';
       font-style: normal;
@@ -869,40 +897,7 @@
       line-height: 19px;
       font-weight: bolder;
     }
-    .restaurantcards article{
-      /**width: 100%;**/
-      margin-top: 15px;
-        margin-top: 15px;
-        margin-bottom: 40px;
-    }
-    .imgrestaurant{
-      height: 200px;
-    }
-    .textrestaurants{
-      padding-left: 15px;
-      padding-top: 20px;
-    }
-    .pdp{
-      padding-top: 50px;
-      display: flex;
-      flex-direction: column;
-      /**flex-direction: row-reverse;**/
-      padding-right: 60px;
-      padding-bottom: 20px;
-      margin-top: -40px;
-    }
-    li::marker{
-      color: transparent;
-    }
-    .liste {
-      display: flex;
-      flex-direction: column;
-      /**flex-direction: row;**/
-      gap: 20px;
-      padding-left: 25px;
-      padding-bottom: 20px;
-      margin-bottom: 0;
-    }
+    
   
     /** PALETTE DU GOUT **/
     .titre-favoris{
