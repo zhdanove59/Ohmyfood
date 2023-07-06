@@ -150,7 +150,9 @@
     opacity: 80%;
     cursor: pointer;
   }
-  
+  .bouton:hover .smartphone{
+    color: #9356DC;
+  }
   
   .bouton{
     position: relative;
@@ -174,13 +176,14 @@
     
     @keyframes pulse {
       to {
-        box-shadow: 0 0 0 18px  rgba(0,0,0,0.01) ;
+        /**box-shadow: 0 0 0 18px  rgba(0,0,0,0.01) ;**/
       }
     }
     .bouton:hover{
       animation: anim-btn 1s ease-in 0.05s 1 forwards;
       cursor: pointer;
-      /**transform:scale(1.1); **/
+      /**filter: brightness(1.085);**/
+      box-shadow: 1px 10px 46px -3px rgba(0,0,0,0.5);
     }
     .bouton:hover .bouton-numero{
       /**transform: rotate(720deg) scale(1.5);**/
@@ -189,21 +192,27 @@
     @keyframes anim-btn {
       0% {
         transform: scale3d(0.97, 0.97, 1);
+        filter: brightness(1);
       }
       20% {
         transform: scale3d(1.02, 1.02, 1);
+        filter: brightness(1.0020);
       }
       40% {
         transform: scale3d(0.98, 0.98, 1);
+        filter: brightness(1.0040);
       }
       60% {
         transform: scale3d(1, 1, 1);
+        filter: brightness(1.0060); 
       }
       80% {
         transform: scale3d(0.99, 0.99, 1);
+        filter: brightness(1.0070);
       }
       100% {
         transform: scale3d(1, 1, 1);
+        filter: brightness(1.0080);
       }
     }
     @keyframes anim-num {
@@ -211,16 +220,17 @@
         transform: rotate(0deg);
       }
       10% {
-        transform: rotate(-90deg);
+        transform: rotate(-90deg);   
       }
       20% {
-        transform: rotate(-40deg);
+        transform: rotate(-40deg); 
       }
       30% {
-        transform: rotate(180deg);
+        transform: rotate(180deg);  
       }
       40% {
         transform: rotate(360deg);
+        
       }
       50% {
         transform: rotate(540deg);
