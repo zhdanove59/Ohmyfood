@@ -24,6 +24,11 @@ body{
   color: #fff;
   animation: disparaitre 200ms 3s forwards;
 }
+/**@keyframes disparaitre {
+  to {
+    transform: scale(0);
+  }
+}**/
 @keyframes disparaitre {
   to {
     transform: scale(0);
@@ -92,7 +97,6 @@ body{
 .fa-arrow-left{
   margin-top: 15px;
   margin-bottom: 20px;
-  size: 30px;
   color: #353535;
   font-size: 17px;
 }
@@ -432,6 +436,64 @@ white-space: nowrap;
   justify-content:center;
   font-weight: 500;
   margin-bottom: -30px;
+}
+.btnentre{
+  animation: flouentre 1.8s linear 0s forwards;
+}
+@keyframes flouentre {
+  0% {
+    opacity: 0;
+    transform:translateY(50px);
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform:translateY(0px);
+  }
+}
+.btnplats{
+  animation: flouplats 1.8s linear 0s forwards;
+}
+@keyframes flouplats {
+  0% {
+    opacity:0;
+    transform:translateY(50px);
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform:translateY(0px);
+
+  }
+}
+.btndessert{
+  animation: floudessert 1.8s linear 0s forwards;
+}
+@keyframes floudessert {
+  0% {
+    opacity: 0;
+    transform:translateY(50px);
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform:translateY(0px);
+  }
 }
 .titre-description{
   flex: 1;
@@ -968,64 +1030,7 @@ white-space: nowrap;
       opacity: 1;
     }
   }
-  .btnentre{
-    animation: flouentre 1.8s linear 0s forwards;
-  }
-  @keyframes flouentre {
-    0% {
-      opacity: 0;
-      transform:translateY(50px);
-    }
-    30% {
-      opacity: 1;
-    }
-    60% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-      transform:translateY(0px);
-    }
-  }
-  .btnplats{
-    animation: flouplats 1.8s linear 0s forwards;
-  }
-  @keyframes flouplats {
-    0% {
-      opacity:0;
-      transform:translateY(50px);
-    }
-    30% {
-      opacity: 0;
-    }
-    60% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-      transform:translateY(0px);
-
-    }
-  }
-  .btndessert{
-    animation: floudessert 1.8s linear 0s forwards;
-  }
-  @keyframes floudessert {
-    0% {
-      opacity: 0;
-      transform:translateY(50px);
-    }
-    30% {
-      opacity: 0;
-    }
-    60% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-      transform:translateY(0px);
-    }
-  }
+  
 
   .plat-petit{
     font-family: 'Roboto';
@@ -1154,4 +1159,5 @@ white-space: nowrap;
     border-radius: 25px;
     border: none;
     box-shadow: 5px 7px 26px -9px rgba(0,0,0,0.5);
+  }
 }
