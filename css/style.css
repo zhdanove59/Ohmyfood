@@ -8,6 +8,87 @@
 body{
   margin: 0;
 }
+/******************************************loader ************************/
+
+.loader-con{
+  position: fixed;
+  background:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0.9;
+  text-align: center;
+  color: #fff;
+  animation: disparaitre 200ms 3s forwards;
+}
+@keyframes disparaitre {
+  to {
+    transform: scale(0);
+  }
+}
+.loader {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-top: 5px solid #e74c3c;
+  position: fixed;
+  animation: load 2s linear infinite;
+  background:-webkit-linear-gradient(-90deg, #9356dc, #ff79da);
+}
+
+.loader::before,.loader::after {
+  content: '';
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  border-radius:50%;
+}
+
+.loader::before {
+  border-top: 5px solid #e67e22;
+  transform: rotate(120deg);
+}
+
+.loader::after {
+  border-top: 5px solid #3498db;
+  transform: rotate(240deg);
+}
+
+.loader span {
+  position: absolute;
+  font-size:larger;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  animation: a2 2s linear infinite;
+}
+
+@keyframes load {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes a2 {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/******************************************loader*********************/
+
 .fa-arrow-left{
   margin-top: 15px;
   margin-bottom: 20px;
@@ -40,6 +121,7 @@ body{
     opacity: 1;
   }
 }
+
 .plat-valide{
   width: 0;
   overflow: hidden;
@@ -762,6 +844,7 @@ white-space: nowrap;
 @media (min-width: 1024px){
 
   /*********************************index*****************/
+  
   .main-con {
     width: 100%;
    /** top: -40px;**/
