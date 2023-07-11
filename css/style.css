@@ -8,6 +8,38 @@
 body{
   margin: 0;
 }
+.main-con{
+  top: 5px;
+  width: 100%;
+  padding-bottom: 43px;
+  }
+.recherche{
+  display: flex;
+  flex-direction: column;
+}
+.recherche--zone{
+  background-color:#EAEAEA;
+  border: none;
+  height: 50px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.barrederecherche{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: #EAEAEA;
+}
+input::placeholder {
+  color: black;
+}
 /******************************************loader ************************/
 
 .loader-con{
@@ -70,11 +102,15 @@ body{
 }
 
 .loader span {
+  font-family: 'Shrikhand';
+  font-style: italic;
   position: absolute;
   font-size:larger;
+  font-weight: bolder;
   width: 100px;
   height: 100px;
-  color: #fff;
+  /**color: #fff;**/
+  color: black;
   text-align: center;
   line-height: 100px;
   animation: a2 2s linear infinite;
@@ -93,67 +129,9 @@ body{
 }
 
 /******************************************loader*********************/
-
-.fa-arrow-left{
-  margin-top: 15px;
-  margin-bottom: 20px;
-  color: #353535;
-  font-size: 17px;
-}
-.contenair-main{
-  /**width: 70%; 
-  margin-left: 500px;
-  margin-right: 500px;**/
-  background: #F6F6F6;
-  border-radius: 40px 40px 0 0;
-  position: relative ;
-  top: -40px;
-  animation: flou 1.8s linear 0s forwards;
-  padding-bottom: 20px
-}
-@keyframes flou {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.plat-valide{
-  width: 0;
-  overflow: hidden;
-  background-color: #99E2D0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: width 0.9s ;
-}
-/** > pour les element enfants **/
-.plat-valide > .fa-circle-check{
-  color: white;
-  font-size: 20px;
-  padding: 0;
-}
-.centrer{
-  display: flex;
-  justify-content: center;
-}
-h2{
-  padding-left: 10px;
-}
 .logo__img{
   width: 200px;
   height: 35px;
-}
-.main-con{
-  top: 5px;
 }
 .recherche{
   display: flex;
@@ -179,6 +157,291 @@ h2{
   width: 100%;
   background-color: #EAEAEA;
 }
+.bolder{
+  font-size: 28px;
+}
+.bold{
+  font-size: 18px;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 300;
+  line-height: 21px;
+
+}
+.bouton-numero{
+  position: absolute;
+  background-color: #9356DC;
+  border: 1px solid #9356DC;
+  width: 19px;
+  color: #FFF;
+  text-align: center;
+  border-radius: 10px;
+  left: -14px;
+  position: relative;
+  transition:transform .5s ;
+  }
+  p{
+    padding-left: 10px;
+  }
+  .carte{
+    position: relative;
+    transition:all 0.5s;
+    width: 100%;
+  }
+  .carte:hover{
+    transform:scale(0.9);
+  }
+  .centre-cards{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 30px;
+    }
+    .Fonctionnement-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.smartphone{
+  padding-top:0;
+  padding-left: 15px;
+}
+.smartphone1{
+  padding-top:0;
+}
+.smartphone:hover{
+  color: #9356DC;
+}
+.Fonctionnement-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.smartphone{
+  padding-top:0;
+  padding-left: 15px;
+}
+.smartphone1{
+  padding-top:0;
+}
+.smartphone:hover{
+  color: #9356DC;
+}
+.nouveau{
+  width: 62px;
+  position: absolute;
+  padding: 6px 6px;
+  transform-origin: 10% 50%;
+  border-radius: 2px;
+  background-color:#99E2D0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color:#008766 ;
+  top: 15px;
+  right: 15px;
+}
+.carte:hover .nouveau{
+  z-index: 1;
+  -webkit-animation: nouveau 2s linear 0.05s;
+          animation: nouveau 2s linear 0.05s;
+}
+  @keyframes nouveau {
+5% {
+  -webkit-transform: rotateZ(40deg);
+          transform: rotateZ(40deg);
+}
+10% {
+  -webkit-transform: rotateZ(110deg);
+          transform: rotateZ(110deg);
+}
+15% {
+  -webkit-transform: rotateZ(85deg);
+          transform: rotateZ(85deg);
+}
+20% {
+  -webkit-transform: rotateZ(92.5deg);
+          transform: rotateZ(92.5deg);
+}
+30% {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+40% {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+50% {
+  -webkit-transform: rotateZ(75deg);
+          transform: rotateZ(75deg);
+}
+60% {
+  -webkit-transform: rotateZ(60deg);
+          transform: rotateZ(60deg);
+}
+70% {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+80% {
+  -webkit-transform: rotateZ(30deg);
+          transform: rotateZ(30deg);
+}
+90% {
+  -webkit-transform: rotateZ(15deg);
+          transform: rotateZ(15deg);
+}
+100% {
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+}
+}
+.imgrestaurant{
+  
+  width: 100%;
+    height: 136px;
+    border-radius: 25px 25px 0 0;
+    object-fit: cover;
+}
+.restaurantcards article {
+    width: 95%;
+    background-color: #FFFFFF;
+    
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.textrestaurants{
+  padding-left: 10px;
+}
+.card-txt  {
+  padding-left: 10px;
+  color: black;
+}
+.titre-lien{
+  padding-left: 10px;
+}
+
+.centre-cards{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+.card-content{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.liens{
+  text-decoration: none;
+}
+.pdp{
+  background-color: #353535;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 60px;
+  padding-bottom: 20px;
+  margin-top: -40px;
+}
+li::marker{
+  color: transparent;
+}
+.piedtitre{
+  font-family:'Shrikhand';
+  font-style: italic;
+  color: #F7F7F7;
+  padding-left: 25px;
+  padding-top: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.liste{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 25px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+.elemetliste{
+  color: #FFFFFF;
+  padding: 0;
+}
+.texte-element{
+  text-decoration: none;
+  color: #F7F7F7;
+  margin-bottom: 20px;
+}
+.fa-handshake-angle {
+  padding-right: 9px;
+  padding-top: 0;
+}
+.fa-utensils{
+  padding-right: 15px;
+  padding-top: 0;
+}
+/*************************************************resaturant   start************/
+.contenair-main{
+  background: #F6F6F6;
+  border-radius: 40px 40px 0 0;
+  position: relative ;
+  top: -40px;
+  animation: flou 1.8s linear 0s forwards;
+  padding-bottom: 20px
+}
+@keyframes flou {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fa-arrow-left{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: #353535;
+  font-size: 17px;
+}
+
+.plat-valide{
+  width: 0;
+  overflow: hidden;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.9s ;
+}
+/** > pour les element enfants **/
+.plat-valide > .fa-circle-check{
+  color: white;
+  font-size: 20px;
+  padding: 0;
+}
+.centrer{
+  display: flex;
+  justify-content: center;
+}
+h2{
+  padding-left: 10px;
+}
 input::placeholder {
   color: black;
 }
@@ -193,27 +456,13 @@ text-overflow: ellipsis;
 white-space: nowrap;
 } 
 .fa-solid{
-  padding-top: 16px;
+  /**padding-top: 16px;**/
 }
-/********************************* demmarage de sass **/
 .titl{
   display: flex;
   justify-content: center;
   text-align: center;
 }
-.bolder{
-  font-size: 28px;
-}
-.bold{
-  font-size: 18px;
-  font-style: normal;
-  font-family: 'Roboto';
-  font-weight: 300;
-  line-height: 21px;
-
-}
-/**************************************    BOUTON START   *******************/
-
 .bouton-explorer{
   height: 50px;
   width: 220px;
@@ -239,7 +488,6 @@ white-space: nowrap;
 .bouton:hover .smartphone{
   color: #9356DC;
 }
-
 .bouton{
   position: relative;
   display: flex;
@@ -337,20 +585,9 @@ white-space: nowrap;
       transform: rotate(720deg);
     }
   }
-  /***************************************22 juin 16h02 ***********/
   .bouton-menu:hover .plat-valide{
     width: 20%;
   }
-  
-  /**.favoris:hover .btnfavoris-vide,
-  .favoris input:checked + .btnfavoris-vide{
-    opacity: 0;
-  }
-  .favoris:hover .btnfavoris-plein,
-  .favoris input:checked + .btnfavoris-vide + .btnfavoris-plein{
-    opacity: 1;
-  }**/
-  
 .bouton-clic{
   
   display: flex;
@@ -360,46 +597,13 @@ white-space: nowrap;
   color: black;
   padding-left: 20px;
 }
-.bouton-numero{
-  position: absolute;
-  background-color: #9356DC;
-  border: 1px solid #9356DC;
-  width: 19px;
-  color: #FFF;
-  text-align: center;
-  border-radius: 10px;
-  left: -14px;
-  position: relative;
-  transition:transform .5s ;
-  }
-  .lesboutons{
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    align-items: center;
-    gap: 17px;
-    padding-bottom: 15px;
-  }
-  p{
-    padding-left: 10px;
-  }
-.Fonctionnement-cards{
+.lesboutons{
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
-  padding-bottom: 50px;
-}
-.smartphone{
-  padding-top:0;
-  padding-left: 15px;
-}
-.smartphone1{
-  padding-top:0;
-}
-.smartphone:hover{
-  color: #9356DC;
+  gap: 17px;
+  padding-bottom: 15px;
 }
 .bouton:hover{
   cursor: pointer;
@@ -528,142 +732,6 @@ white-space: nowrap;
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 25px;
-  
-}
-/***********************************   BOUTON FIN   ********************/
-/**------------start---------carte animation ---**/
-.carte{
-  position: relative;
-  transition:all 0.5s;
-  width: 100%;
-}
-.carte:hover{
-  transform:scale(0.9);
-}
-.centre-cards{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px;
-  }
-/**------------FIN---------carte animation ---**/
-.nouveau{
-  width: 62px;
-  position: absolute;
-  padding: 6px 6px;
-  transform-origin: 10% 50%;
-  border-radius: 2px;
-  background-color:#99E2D0;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 500;
-  color:#008766 ;
-  top: 15px;
-  right: 15px;
-}
-/**-------------------------------------------------26/26**/
-/**.nouveau:hover{
-  transition: all .2s;
-  animation: nouveau 2s linear 0.05s 1 both;
-}**/
-.carte:hover .nouveau{
-  z-index: 1;
-  -webkit-animation: nouveau 2s linear 0.05s;
-          animation: nouveau 2s linear 0.05s;
-}
-  @keyframes nouveau {
-5% {
-  -webkit-transform: rotateZ(40deg);
-          transform: rotateZ(40deg);
-}
-10% {
-  -webkit-transform: rotateZ(110deg);
-          transform: rotateZ(110deg);
-}
-15% {
-  -webkit-transform: rotateZ(85deg);
-          transform: rotateZ(85deg);
-}
-20% {
-  -webkit-transform: rotateZ(92.5deg);
-          transform: rotateZ(92.5deg);
-}
-30% {
-  -webkit-transform: rotateZ(90deg);
-          transform: rotateZ(90deg);
-}
-40% {
-  -webkit-transform: rotateZ(90deg);
-          transform: rotateZ(90deg);
-}
-50% {
-  -webkit-transform: rotateZ(75deg);
-          transform: rotateZ(75deg);
-}
-60% {
-  -webkit-transform: rotateZ(60deg);
-          transform: rotateZ(60deg);
-}
-70% {
-  -webkit-transform: rotateZ(45deg);
-          transform: rotateZ(45deg);
-}
-80% {
-  -webkit-transform: rotateZ(30deg);
-          transform: rotateZ(30deg);
-}
-90% {
-  -webkit-transform: rotateZ(15deg);
-          transform: rotateZ(15deg);
-}
-100% {
-  -webkit-transform: rotateZ(0deg);
-          transform: rotateZ(0deg);
-}
-}
-
-.imgrestaurant{
-  
-  width: 100%;
-    height: 136px;
-    border-radius: 25px 25px 0 0;
-    object-fit: cover;
-}
-.restaurantcards article {
-    width: 95%;
-    background-color: #FFFFFF;
-    
-    border-radius: 25px;
-    margin-bottom: 20px;
-}
-.main-con{
-  width: 100%;
-  padding-bottom: 43px;
-  
-}
-.textrestaurants{
-  padding-left: 10px;
-}
-.card-txt  {
-  padding-left: 10px;
-  color: black;
-}
-.titre-lien{
-  padding-left: 10px;
-}
-
-.centre-cards{
-  display: flex;
-  flex-direction: column;
-  
-  align-items: center;
-}
-.card-content{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 .favoris{
   display: flex;
@@ -700,14 +768,6 @@ white-space: nowrap;
   -webkit-background-clip: text;
   color: transparent;
 }
-/**.btnfavoris-plein{
-  position: absolute;
-  opacity: 0;
-  font-size: 20px;
-  color: linear-gradient(170deg, #FF79DA, #9356DC);;
-  transition: .9s;
-  padding: 0;
-}**/
 .favoris:hover{
   transform: scale(1.5);
 }
@@ -719,70 +779,11 @@ white-space: nowrap;
 .favoris input:checked + .btnfavoris-vide + .btnfavoris-plein{
   opacity: 1;
 }
-
-
-/**************************** teste plat valide *******/
-.plat-valide input:checked {
-  width: 20%;
-} 
 .restaurant{
   background-color:#F7F7F7;
   display: flex;
   flex-direction: column;
 }
-.liens{
-  text-decoration: none;
-}
-.pdp{
-  background-color: #353535;
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  padding-right: 60px;
-  padding-bottom: 20px;
-  margin-top: -40px;
-}
-li::marker{
-  color: transparent;
-}
-.piedtitre{
-  font-family:'Shrikhand';
-  font-style: italic;
-  color: #F7F7F7;
-  padding-left: 25px;
-  padding-top: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.liste{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-left: 25px;
-  padding-bottom: 20px;
-  margin-bottom: 0;
-}
-.elemetliste{
-  color: #FFFFFF;
-  padding: 0;
-}
-.texte-element{
-  text-decoration: none;
-  color: #F7F7F7;
-  margin-bottom: 20px;
-}
-.fa-handshake-angle {
-  padding-right: 9px;
-  padding-top: 0;
-}
-.fa-utensils{
-  padding-right: 15px;
-  padding-top: 0;
-}
-
-/**--------------------------------------------- LA PALETTE DU GOUT ----------**/
-
-
 .titre-la-palette{
   font-family: 'Shrikhand';
   font-style: italic;
@@ -860,21 +861,6 @@ li::marker{
   position: absolute;
   border-radius: 25px 25px ;
 }
-
-/** .plat-valide{
-  display: none;
-  width: 0px;
-  background-color: Green;
-  animation: animation-carte 1s ease-in 0.5s forwards;
-}
-
-.plat-valide:hover{
-  background-color: Green;
-  width: 30px;
-
-}**/
-
-
 .plat-gras{
   font-weight: bolder;
 }
@@ -902,6 +888,12 @@ white-space: nowrap;
   padding-left: 10px;
   font-weight: bolder;
 }
+
+/*************************************************resaturant   fin************/
+
+.plat-valide input:checked {
+  width: 20%;
+} 
 
 @media (min-width: 1024px){
 
