@@ -1,40 +1,247 @@
 p {
-    font-family: 'Roboto',sans-serif;
+  font-family: 'Roboto',sans-serif;
+  padding-left: 10px;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+  font-style: italic;
+}
+
+textarea {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2.75rem;
+}
+
+p {
+  font-family: 'Roboto',sans-serif;
+}
+
+h2 {
+  padding-left: 10px;
+}
+
+.texte-entrees {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: -8px;
+
+  &::after {
+    content: '';
+    bottom: 5px;
+    display: block;
+    background-color: #99E2D0;
+    width: 40px;
+    height: 3px;
   }
-  
-  body {
-    margin: 0;
+
+  &:hover {
+    text-transform: uppercase;
   }
-  
-  .fa-arrow-left {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    size: 30px;
-    color: #353535;
-    font-size: 17px;
+}
+
+@media (min-width: 1024px) {
+  .texte-entrees {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: -8px;
   }
-  
-  input::placeholder {
+}
+
+body {
+  margin: 0;
+}
+
+.loader-con {
+  position: fixed;
+  background: black;
+  display: flex;
+  justify-content: center;
+  margin: -8px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0.9;
+  text-align: center;
+  color: #fff;
+  animation: disparaitre 200ms 3s forwards;
+}
+
+@keyframes disparaitre {
+  to {
+    transform: scale(0);
+  }
+}
+
+.loader {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-top: 5px solid #e74c3c;
+  position: fixed;
+  animation: load 2s linear infinite;
+  background: -webkit-linear-gradient(-90deg, #9356dc, #ff79da);
+
+  &::before, &::after {
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
+
+  &::before {
+    border-top: 5px solid #e67e22;
+    transform: rotate(120deg);
+  }
+
+  &::after {
+    border-top: 5px solid #3498db;
+    transform: rotate(240deg);
+  }
+
+  span {
+    font-family: 'Shrikhand';
+    font-style: italic;
+    position: absolute;
+    font-size: larger;
+    font-weight: bolder;
+    width: 100px;
+    height: 100px;
+
+    /**color: #fff;**/
     color: black;
+    text-align: center;
+    line-height: 100px;
+    animation: a2 2s linear infinite;
   }
-  
-  .fa-solid {
-    padding-top: 16px;
+}
+
+@keyframes load {
+  to {
+    transform: rotate(360deg);
   }
-  
-  p {
-    padding-left: 10px;
+}
+
+@keyframes a2 {
+  to {
+    transform: rotate(-360deg);
   }
-  
-  .smartphone {
-    padding-top: 0;
-    padding-left: 15px;
-  }
-  
-  .smartphone1 {
-    padding-top: 0;
-  }
-  
-  .smartphone:hover {
+}
+
+.fa-arrow-left {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  size: 30px;
+  color: #353535;
+  font-size: 17px;
+}
+
+input::placeholder {
+  color: black;
+}
+
+.fa-solid {
+  padding-top: 16px;
+}
+
+p {
+  padding-left: 10px;
+}
+
+.smartphone {
+  padding-top: 0;
+  padding-left: 15px;
+
+  &:hover {
     color: #9356DC;
   }
+}
+
+.smartphone1 {
+  padding-top: 0;
+  padding-left: 15px;
+}
+
+.recherche {
+  display: flex;
+  flex-direction: column;
+}
+
+.bolder {
+  font-size: 28px;
+}
+
+.bold {
+  font-size: 18px;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.fa-handshake-angle {
+  padding-right: 9px;
+  padding-top: 0;
+}
+
+.fa-utensils {
+  padding-right: 15px;
+  padding-top: 0;
+}
+
+.tete-fleche {
+  position: absolute;
+  top: 2px;
+  left: 9px;
+}
+
+.section-palette {
+  position: absolute;
+  border-radius: 25px 25px;
+}
+
+.plat-gras {
+  font-weight: bolder;
+}
+
+.row-prix {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.prix-validation {
+  display: flex;
+  flex-direction: row;
+}
+
+.prix-assiette {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: bolder;
+}

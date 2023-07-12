@@ -1,6 +1,217 @@
-.container {
-    margin: $layout-margin;
-    padding: $grid-gutter $grid-gutter 0 $grid-gutter;
-    @include border($colour-accent);
-}
-
+.main-con {
+    top: 5px;
+    width: 100%;
+    padding-bottom: 43px;
+  }
+  
+  @media (min-width: 1024px) {
+    .main-con {
+      width: 100%;
+      position: relative;
+    }
+  }
+  
+  .contenair-main {
+    background: #F6F6F6;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    top: -40px;
+    animation: flou 1.8s linear 0s forwards;
+    padding-bottom: 20px;
+  }
+  
+  @media (min-width: 1024px) {
+    .contenair-main {
+      /**width: 70%;**/
+      margin-left: 500px;
+      margin-right: 500px;
+      background: #F6F6F6;
+      border-radius: 40px 40px 0 0;
+      position: relative;
+      top: -40px;
+      animation: flou 1.8s linear 0s forwards;
+      padding-bottom: 20px;
+    }
+  
+    @keyframes flou {
+      0% {
+        opacity: 0;
+      }
+  
+      30% {
+        opacity: 0;
+      }
+  
+      60% {
+        opacity: 0.6;
+      }
+  
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+  
+  @keyframes flou {
+    0% {
+      opacity: 0;
+    }
+  
+    30% {
+      opacity: 0;
+    }
+  
+    60% {
+      opacity: 0.6;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .pdp {
+    background-color: #353535;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+    padding-bottom: 20px;
+    margin-top: -40px;
+  }
+  
+  li::marker {
+    color: transparent;
+  }
+  
+  @media (min-width: 1024px) {
+    .pdp {
+      padding-top: 50px;
+      display: flex;
+  
+      /**flex-direction: column;**/
+      flex-direction: row-reverse;
+      padding-right: 60px;
+      padding-bottom: 20px;
+      margin-top: -40px;
+    }
+  
+    li::marker {
+      color: transparent;
+    }
+  }
+  
+  .piedtitre {
+    font-family: 'Shrikhand';
+    font-style: italic;
+    color: #F7F7F7;
+    padding-left: 25px;
+    padding-top: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  @media (min-width: 1024px) {
+    .piedtitre {
+      font-family: 'Shrikhand';
+      font-style: italic;
+      color: #F7F7F7;
+      padding-left: 25px;
+      padding-top: 13px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  
+  .liste {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+  
+  @media (min-width: 1024px) {
+    .liste {
+      display: flex;
+  
+      /**flex-direction: column;**/
+      flex-direction: row;
+      gap: 20px;
+      padding-left: 25px;
+      padding-bottom: 20px;
+      margin-bottom: 0;
+    }
+  }
+  
+  .elemetliste {
+    color: #FFFFFF;
+    padding: 0;
+  }
+  
+  .texte-element {
+    text-decoration: none;
+    color: #F7F7F7;
+    margin-bottom: 20px;
+  }
+  
+  .plat-valide {
+    width: 0;
+    overflow: hidden;
+    background-color: #99E2D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.9s;
+  
+    > .fa-circle-check {
+      color: white;
+      font-size: 20px;
+      padding: 0;
+    }
+  
+    input:checked {
+      width: 20%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .plat-valide > .fa-circle-check {
+      color: white;
+      font-size: 20px;
+      padding: 0;
+    }
+  }
+  
+  .plat-petit {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15.0431px;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  @media (min-width: 1024px) {
+    .plat-petit {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 15.0431px;
+      line-height: 18px;
+      overflow: hidden;
+  
+      /**text-overflow: ellipsis;**/
+      white-space: nowrap;
+    }
+  }
+  
+  .titl {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  

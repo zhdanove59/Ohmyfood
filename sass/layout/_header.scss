@@ -1,14 +1,79 @@
-.header {
-    background: $colour-primary;
-    height: 10rem;
+.tete__titre {
+    font-family: 'Shrikhand';
+    font-style: italic;
+    color: black;
     display: flex;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    width: 100%;   
-    &__logo {
-        font-size: 7rem;
-        color: $colour-secondary;
-        margin-left: 10rem;
-        @include heading-shadow($colour-white);
+    margin-top: 18px;
+    margin-bottom: 18px;
+    position: relative;
+  }
+  
+  .image-plat {
+    object-fit: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  @media (min-width: 1024px) {
+    .image-plat {
+      position: relative;
+      object-fit: cover;
+      width: 100%;
+      height: 380px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
     }
-}
+  }
+  
+  .logo__img {
+    width: 200px;
+    height: 35px;
+  }
+  
+  @media (min-width: 1024px) {
+    .logo__img {
+      width: 200px;
+      height: 35px;
+    }
+  }
+  
+  .centrer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .centrer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  .recherche--zone {
+    background-color: #EAEAEA;
+    border: none;
+    height: 50px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .barrederecherche {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background-color: #EAEAEA;
+  }
+  

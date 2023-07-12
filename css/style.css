@@ -456,7 +456,7 @@ text-overflow: ellipsis;
 white-space: nowrap;
 } 
 .fa-solid{
-  /**padding-top: 16px;**/
+  padding-top: 16px;
 }
 .titl{
   display: flex;
