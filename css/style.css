@@ -418,6 +418,7 @@ li::marker{
   margin-bottom: 20px;
   color: #353535;
   font-size: 17px;
+  
 }
 
 .plat-valide{
@@ -455,7 +456,10 @@ overflow: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
 } 
-.fa-solid{
+.fa-solid.fa-location-dot{
+  padding-top: 16px;
+}
+.fa-solid.fa-arrow-left {
   padding-top: 16px;
 }
 .titl{

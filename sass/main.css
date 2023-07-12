@@ -1,6 +1,9 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 p {
   font-family: "Roboto", sans-serif;
-  padding-left: 10px;
 }
 
 h1 {
@@ -16,21 +19,21 @@ textarea {
   font-size: 2rem;
 }
 
-button {
-  font-family: "Roboto", sans-serif;
+/**button {
+  font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  font-style: italic;
   font-size: 2.75rem;
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto',sans-serif;
 }
-.accueuil{
-  background: #008766;
-}
+
 h2 {
   padding-left: 10px;
+}**/
+h2 {
+  padding-left: 16px;
 }
 
 .texte-entrees {
@@ -150,6 +153,7 @@ body {
   size: 30px;
   color: #353535;
   font-size: 17px;
+  padding-top: 10px;
 }
 
 input::-moz-placeholder {
@@ -160,9 +164,13 @@ input::placeholder {
   color: black;
 }
 
-.fa-solid {
+.fa-solid.fa-location-dot {
   padding-top: 16px;
 }
+
+/**.fa-solid.fa-arrow-left {
+  padding-top: 16px;
+}**/
 
 p {
   padding-left: 10px;
