@@ -8,9 +8,8 @@ p {
 
 h1 {
   font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-size: 5rem;
-  font-style: italic;
+  font-weight: 700;
+  font-size: 40px;
 }
 
 textarea {
@@ -169,7 +168,7 @@ input::placeholder {
 }
 
 .fa-solid.fa-arrow-left {
-  padding-top: 16px;
+  padding-top: 5px;
 }
 
 p {
@@ -204,6 +203,7 @@ p {
   font-family: "Roboto";
   font-weight: 300;
   line-height: 21px;
+  color: #353535;
 }
 
 .fa-handshake-angle {
@@ -711,6 +711,7 @@ p {
   opacity: 1;
   transition: 0.3s;
   padding: 0;
+  color: black;
 }
 
 .btnfavoris-plein {

@@ -9,9 +9,9 @@ p {
 
 h1 {
   font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-size: 5rem;
-  font-style: italic;
+  font-weight: 700;
+  font-size: 40px;
+  
 }
 
 textarea {
@@ -175,7 +175,7 @@ input::placeholder {
   padding-top: 16px;
 }
 .fa-solid.fa-arrow-left {
-  padding-top: 16px;
+  padding-top: 5px;
 }
 
 p {
@@ -211,6 +211,7 @@ p {
   font-family: 'Roboto';
   font-weight: 300;
   line-height: 21px;
+  color: #353535;
 }
 
 .fa-handshake-angle {
