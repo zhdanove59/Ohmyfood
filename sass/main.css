@@ -17,20 +17,6 @@ textarea {
   font-weight: 100;
   font-size: 2rem;
 }
-
-/**button {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-size: 2.75rem;
-}
-
-p {
-  font-family: 'Roboto',sans-serif;
-}
-
-h2 {
-  padding-left: 10px;
-}**/
 h2 {
   padding-left: 16px;
 }
@@ -149,7 +135,7 @@ body {
 .fa-arrow-left {
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 30px;
+  size: 30px;
   color: #353535;
   font-size: 17px;
   padding-top: 10px;
